@@ -12,16 +12,17 @@
 #use standard_io(c)
 
 #define LED PIN_A0
-#define DELAY 500
+#define DELAY 300
+
 /*
  * 
  */
-void main ( ) { 
-   
-   while(1){
-      output_high(LED);
-      delay_ms ( DELAY );
-      output_high(LED);      
-      delay_ms ( DELAY );      
-   }
+void main() {
+
+    while (1) {
+        output_high(LED);
+        delay_ms(DELAY);
+        output_low(LED);
+        delay_ms(DELAY);
+    }
 }
