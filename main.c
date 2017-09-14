@@ -11,17 +11,17 @@
 
 #use standard_io(c)
 
+#define LED PIN_A0
+#define DELAY 500
 /*
  * 
  */
 void main ( ) { 
    
    while(1){
-      output_high()
-      delay_ms ( 500 );
-      if (counter==9) 
-         counter=0;
-      else
-         counter++;
+      output_high(LED);
+      delay_ms ( DELAY );
+      output_high(LED);      
+      delay_ms ( DELAY );      
    }
 }

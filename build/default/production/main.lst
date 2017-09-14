@@ -1,0 +1,128 @@
+CCS PCM C Compiler, Version 5.015, 5967               14-sep.-17 12:42
+
+               Filename:   C:\Users\joaquinalan\MPLABXProjects\Blink.X\build\default\production\main.lst
+
+               ROM used:   71 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           8 (2%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   018
+0003:  NOP
+.................... /*  
+....................  * File:   main.c 
+....................  * Author: joaquinalan 
+....................  * 
+....................  * Created on 14 de septiembre de 2017, 11:40 AM 
+....................  */ 
+....................  
+.................... #include <16F886.h> 
+.................... //////////// Standard Header file for the PIC16F886 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F886 
+....................  
+.................... #list 
+....................  
+.................... #FUSES HS, PUT, NOLVP, PROTECT,NOMCLR, BROWNOUT 
+.................... #use delay(clock=20M) 
+0004:  MOVLW  22
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+....................  
+.................... #use standard_io(c) 
+....................  
+.................... #define LED PIN_A0 
+.................... #define DELAY 500 
+.................... /* 
+....................  *  
+....................  */ 
+.................... void main ( ) {  
+0018:  MOVF   03,W
+0019:  ANDLW  1F
+001A:  MOVWF  03
+001B:  MOVLW  FF
+001C:  MOVWF  20
+001D:  BSF    03.5
+001E:  BSF    03.6
+001F:  MOVF   09,W
+0020:  ANDLW  C0
+0021:  MOVWF  09
+0022:  BCF    03.6
+0023:  BCF    1F.4
+0024:  BCF    1F.5
+0025:  MOVLW  00
+0026:  BSF    03.6
+0027:  MOVWF  08
+0028:  BCF    03.5
+0029:  CLRF   07
+002A:  CLRF   08
+002B:  CLRF   09
+002C:  BCF    03.7
+....................     
+....................    while(1){ 
+....................       output_high(LED); 
+002D:  BSF    03.5
+002E:  BCF    03.6
+002F:  BCF    05.0
+0030:  BCF    03.5
+0031:  BSF    05.0
+....................       delay_ms ( DELAY ); 
+0032:  MOVLW  02
+0033:  MOVWF  21
+0034:  MOVLW  FA
+0035:  MOVWF  22
+0036:  CALL   004
+0037:  DECFSZ 21,F
+0038:  GOTO   034
+....................       output_high(LED);       
+0039:  BSF    03.5
+003A:  BCF    05.0
+003B:  BCF    03.5
+003C:  BSF    05.0
+....................       delay_ms ( DELAY );       
+003D:  MOVLW  02
+003E:  MOVWF  21
+003F:  MOVLW  FA
+0040:  MOVWF  22
+0041:  CALL   004
+0042:  DECFSZ 21,F
+0043:  GOTO   03F
+0044:  BSF    03.6
+0045:  GOTO   02D
+....................    } 
+.................... } 
+0046:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2F82   HS NOWDT PUT NOMCLR PROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT
