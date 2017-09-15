@@ -1,0 +1,18 @@
+[PROJECT]
+Target=dist\default\debug\Blink.X.debug.hex
+Processor_Text=PIC16F886
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=dist\default\debug\Blink.X.debug.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\
+[dist\default\debug\Blink.X.debug.c]
+Type=4
+[mru-list]
+1=dist\default\debug\Blink.X.debug.c
+[Units]
+Count=2
+1=build\default\debug\main
+2=build\default\debug\blink
+Link=1

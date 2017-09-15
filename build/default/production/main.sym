@@ -7,8 +7,12 @@
 01B     CCP_2_LOW
 01C     CCP_2_HIGH
 020     @TRIS_C
-021     main.@SCRATCH1
-022     @delay_ms1.P1
+021     blinkLed.ledPin
+022     @WRITEBITA.P1
+022     blinkLed.@SCRATCH1
+023     @delay_ms1.P1
+023     @WRITEBITA.P2
+024-025 @WRITEBITA.P1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -20,19 +24,22 @@
 10D-10E @READ_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-000004  @delay_ms1
-000018  @cinit1
-000018  main
-00002C  @cinit2
+000004  @WRITEBITA
+000024  @delay_ms1
+000038  blinkLed
+000060  MAIN
+000060  @cinit1
+000074  @cinit2
 
 Project Directory:
     C:\Users\joaquinalan\MPLABXProjects\Blink.X\
 
 Project Files:
-    main.c                                                  [14-sep.-17 12:42  CRC=DD106D62]
+    main.c                                                  [14-sep.-17 23:47  CRC=EF240690]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F886.h   [12-nov.-13 14:35  CRC=E3D32390]
+    blink.c                                                 [14-sep.-17 23:08  CRC=00000000]
 
-Source signature=A4B6B482
+Source signature=D2F72A20
 
 Units:
     main (main)

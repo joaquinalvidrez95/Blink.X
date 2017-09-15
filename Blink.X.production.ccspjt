@@ -1,0 +1,18 @@
+[PROJECT]
+Target=dist\default\production\Blink.X.production.hex
+Processor_Text=PIC16F886
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=dist\default\production\Blink.X.production.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\
+[dist\default\production\Blink.X.production.c]
+Type=4
+[mru-list]
+1=dist\default\production\Blink.X.production.c
+[Units]
+Count=2
+1=build\default\production\main
+2=build\default\production\blink
+Link=1
