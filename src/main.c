@@ -12,7 +12,7 @@
 #use standard_io(c)
 
 #include "blink.c"
-#include "DS3231.c"
+//#include "DS3231.c"
 
 #define LED PIN_A0
 #define DELAY 300
