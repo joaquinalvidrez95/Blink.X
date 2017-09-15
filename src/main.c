@@ -4,7 +4,7 @@
  *
  * Created on 14 de septiembre de 2017, 11:40 AM
  */
-
+// Hola
 #include <16F886.h>
 #FUSES HS, PUT, NOLVP, PROTECT,NOMCLR, BROWNOUT
 #use delay(clock=20M)
@@ -12,6 +12,7 @@
 #use standard_io(c)
 
 #include "blink.c"
+#include "DS3231.c"
 
 #define LED PIN_A0
 #define DELAY 300
