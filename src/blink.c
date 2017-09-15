@@ -1,8 +1,8 @@
 
-void blinkLed(int ledPin) {
+void blinkLed(int8 ledPin, int8 delay) {
     output_high(ledPin);
-    delay_ms(500);
+    delay_ms(delay);
     output_low(ledPin);
-    delay_ms(200);
+    delay_ms(delay);
 }
 
