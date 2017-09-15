@@ -22,6 +22,6 @@
 void main() {
 
     while (TRUE) {
-        blinkLed(LED);        
+        blinkLed(LED, DELAY);
     }
 }
