@@ -1,6 +1,6 @@
-CCS PCM C Compiler, Version 5.015, 5967               14-sep.-17 23:47
+CCS PCM C Compiler, Version 5.015, 5967               15-sep.-17 00:30
 
-               Filename:   C:\Users\joaquinalan\MPLABXProjects\Blink.X\build\default\production\main.lst
+               Filename:   C:\Users\joaquinalan\MPLABXProjects\Blink.X\build\default\production\src\main.lst
 
                ROM used:   124 words (2%)
                            Largest free fragment is 2048
@@ -93,7 +93,7 @@ CCS PCM C Compiler, Version 5.015, 5967               14-sep.-17 23:47
 ....................  
 .................... #use standard_io(c) 
 ....................  
-.................... #include <blink.c> 
+.................... #include "blink.c" 
 ....................  
 .................... void blinkLed(int ledPin) { 
 ....................     output_high(ledPin); 

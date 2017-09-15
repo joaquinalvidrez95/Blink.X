@@ -11,7 +11,7 @@
 
 #use standard_io(c)
 
-#include <blink.c>
+#include "blink.c"
 
 #define LED PIN_A0
 #define DELAY 300

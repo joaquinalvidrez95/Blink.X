@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c
+SOURCEFILES_QUOTED_IF_SPACED=src/main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/src/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/src/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/src/main.o
 
 # Source Files
-SOURCEFILES=main.c
+SOURCEFILES=src/main.c
 
 
 CFLAGS=
@@ -94,28 +94,28 @@ MP_LD="C:\Program Files (x86)\PICC\CCSCON.exe"
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	${MKDIR} ${OBJECTDIR} 
+${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} ${OBJECTDIR}/src 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  main.c +FM +DF +CC  #__DEBUG=1 +ICD +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 
-	@mv ${OBJECTDIR}/main.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/main.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.hex"
+	${MP_CC}  out="${OBJECTDIR}\src"  src/main.c +FM +DF +CC  #__DEBUG=1 +ICD +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 
+	@mv ${OBJECTDIR}/src/main.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.cof" 
+	@mv ${OBJECTDIR}/src/main.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" main.c +EXPORT +FM +DF +CC  #__DEBUG=1 +ICD +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}\src"" src/main.c +EXPORT +FM +DF +CC  #__DEBUG=1 +ICD +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 +EXPORTD="${OBJECTDIR}/src"  
 	
 endif 
 	
 else
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	${MKDIR} ${OBJECTDIR} 
+${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} ${OBJECTDIR}/src 
 ifeq (1,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC}  out="${OBJECTDIR}"  main.c +FM +DF +CC +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 
-	@mv ${OBJECTDIR}/main.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/main.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.hex"
+	${MP_CC}  out="${OBJECTDIR}\src"  src/main.c +FM +DF +CC +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 
+	@mv ${OBJECTDIR}/src/main.cof "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.cof" 
+	@mv ${OBJECTDIR}/src/main.hex "dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" main.c +EXPORT +FM +DF +CC +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}\src"" src/main.c +EXPORT +FM +DF +CC +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P #__16F886=1 +EXPORTD="${OBJECTDIR}/src"  
 	
 endif 
 	
@@ -129,7 +129,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTF
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Blink.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/main.o +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Blink.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/src/main.o +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P
 	
 endif 
 	
@@ -139,7 +139,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/Blink.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTF
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Blink.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/main.o +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FM +DF +CC LINK=Blink.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/src/main.o +Y=9 +EA I+="..\..\..\..\Program Files (x86)\PICC\Devices" +DF +LN +T +A +M +J +EA +Z -P
 	
 endif 
 	

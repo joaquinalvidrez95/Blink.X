@@ -35,14 +35,14 @@ Project Directory:
     C:\Users\joaquinalan\MPLABXProjects\Blink.X\
 
 Project Files:
-    main.c                                                  [14-sep.-17 23:47  CRC=EF240690]
+    src\main.c                                              [15-sep.-17 00:19  CRC=EF240690]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F886.h   [12-nov.-13 14:35  CRC=E3D32390]
-    blink.c                                                 [14-sep.-17 23:08  CRC=00000000]
+    src\blink.c                                             [14-sep.-17 23:08  CRC=00000000]
 
 Source signature=D2F72A20
 
 Units:
-    main (main)
+    src\main (main)
 
 Compiler Settings:
     Processor:      PIC16F886
@@ -55,13 +55,13 @@ Compiler Settings:
        #define __16F886 1
 
 Output Files:
-    XREF file:   build\default\production\main.xsym
-    Errors:      build\default\production\main.err
-    Ext Symbols: build\default\production\main.esym
-    INHX8:       build\default\production\main.hex
-    Symbols:     build\default\production\main.sym
-    List:        build\default\production\main.lst
-    Debug/COFF:  build\default\production\main.cof
+    XREF file:   build\default\production\src\main.xsym
+    Errors:      build\default\production\src\main.err
+    Ext Symbols: build\default\production\src\main.esym
+    INHX8:       build\default\production\src\main.hex
+    Symbols:     build\default\production\src\main.sym
+    List:        build\default\production\src\main.lst
+    Debug/COFF:  build\default\production\src\main.cof
     Project:     main.ccspjt
-    Call Tree:   build\default\production\main.tre
-    Statistics:  build\default\production\main.STA
+    Call Tree:   build\default\production\src\main.tre
+    Statistics:  build\default\production\src\main.STA

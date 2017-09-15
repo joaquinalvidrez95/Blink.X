@@ -13,9 +13,9 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   28     3  43  main.c
+   28     3  43  src\main.c
   751     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F886.h
-    9     4  57  blink.c
+    9     4  57  src\blink.c
 ----- -----
   788     7 Total
 

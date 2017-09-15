@@ -1,18 +1,20 @@
 [PROJECT]
-Target=build\default\production\main.hex
+Target=build\default\production\src\main.hex
 Processor_Text=PIC16F886
 CCSVersion=5.015
 Compiler=PCM
 [Target Data]
-FileList=build\default\production\main.c
+FileList=build\default\production\src\main.c
 [Directories]
 Include=C:\Program Files (x86)\PICC\Devices\
 [build\default\production\main.c]
 Type=4
 [mru-list]
-1=build\default\production\main.c
+1=build\default\production\src\main.c
 [build\default\debug\main.c]
+Type=4
+[build\default\production\src\main.c]
 Type=4
 [Units]
 Count=1
-1=main (main)
+1=src\main (main)
